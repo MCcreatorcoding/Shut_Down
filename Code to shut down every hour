@@ -1,0 +1,27 @@
+import os
+import time
+
+from tkinter import  *
+
+def shutdown():
+    i = 0
+    while i < 3600  :
+        print('waiting...')
+        time.sleep(1)
+        i = i + 1
+
+    print('go outside...')
+    os.system('shutdown -s')
+
+ 
+
+window = Tk()
+button = Button(window,text ='Shut Down In One Hour')
+button.config(command=shutdown)
+button.config(font=('Ink Free',50,'bold'))
+button.config(bg='#ff0000')
+button.config(fg='#ffffff')
+button.config(activebackground='#f79502')
+button.config(activebackground='#ff0000')
+button.pack()
+window.mainloop()
